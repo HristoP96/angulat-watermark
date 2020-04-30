@@ -3,12 +3,17 @@
   "rules": {
     "array-type": false,
     "arrow-parens": false,
+    "indent": false, 
     "deprecation": {
       "severity": "warning"
     },
     "component-class-suffix": true,
     "contextual-lifecycle": true,
     "directive-class-suffix": true,
+    "only-arrow-functions": false,
+    "semicolon": false,
+    "no-angle-bracket-type-assertion": false,
+    "whitespace": false,
     "directive-selector": [
       true,
       "attribute",
@@ -18,7 +23,6 @@
     "component-selector": [
       true,
       "element",
-      "app",
       "kebab-case"
     ],
     "import-blacklist": [
@@ -59,6 +63,8 @@
     ],
     "no-non-null-assertion": true,
     "no-redundant-jsdoc": true,
+    "jsdoc-format": false,
+    "variable-name": false,
     "no-switch-case-fall-through": true,
     "no-var-requires": false,
     "object-literal-key-quotes": [
@@ -68,16 +74,15 @@
     "object-literal-sort-keys": false,
     "ordered-imports": false,
     "quotemark": [
-      true,
-      "single"
+      true
     ],
     "trailing-comma": false,
     "no-conflicting-lifecycle": true,
-    "no-host-metadata-property": true,
+    "no-host-metadata-property": false,
     "no-input-rename": true,
     "no-inputs-metadata-property": true,
     "no-output-native": true,
-    "no-output-on-prefix": true,
+    "no-output-on-prefix": false,
     "no-output-rename": true,
     "no-outputs-metadata-property": true,
     "template-banana-in-box": true,

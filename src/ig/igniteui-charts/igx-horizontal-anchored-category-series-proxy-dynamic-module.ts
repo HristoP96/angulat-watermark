@@ -1,0 +1,32 @@
+/* 
+THIS INFRAGISTICS ULTIMATE SOFTWARE LICENSE  AGREEMENT ("AGREEMENT") LOCATED HERE: 
+https://www.infragistics.com/legal/license/igultimate-la 
+https://www.infragistics.com/legal/license/igultimate-eula 
+GOVERNS THE LICENSING, INSTALLATION AND USE OF INFRAGISTICS SOFTWARE. BY DOWNLOADING AND/OR INSTALLING AND USING INFRAGISTICS SOFTWARE: you are indicating that you have read and understand this Agreement, and agree to be legally bound by it on behalf of the yourself and your company.
+*/
+
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HorizontalAnchoredCategorySeriesProxy } from './HorizontalAnchoredCategorySeriesProxy';
+import { TypeRegistrar } from 'igniteui-core/type';
+import { IgxHorizontalAnchoredCategorySeriesProxyModule } from './igx-horizontal-anchored-category-series-proxy-module'
+
+
+
+@NgModule({
+    declarations: [],
+    exports: [IgxHorizontalAnchoredCategorySeriesProxyModule
+    ],
+    imports: [CommonModule, IgxHorizontalAnchoredCategorySeriesProxyModule
+    ],
+    entryComponents: []
+})
+export class IgxHorizontalAnchoredCategorySeriesProxyDynamicModule {
+    
+    constructor() {
+                TypeRegistrar.registerCons('HorizontalAnchoredCategorySeriesProxy', HorizontalAnchoredCategorySeriesProxy);
+                TypeRegistrar.register('HorizontalAnchoredCategorySeriesProxy', (HorizontalAnchoredCategorySeriesProxy as any).$type);
+
+    }
+
+}

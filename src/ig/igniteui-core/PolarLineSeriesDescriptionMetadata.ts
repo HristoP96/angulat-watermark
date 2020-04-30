@@ -1,0 +1,37 @@
+/* 
+THIS INFRAGISTICS ULTIMATE SOFTWARE LICENSE  AGREEMENT ("AGREEMENT") LOCATED HERE: 
+https://www.infragistics.com/legal/license/igultimate-la 
+https://www.infragistics.com/legal/license/igultimate-eula 
+GOVERNS THE LICENSING, INSTALLATION AND USE OF INFRAGISTICS SOFTWARE. BY DOWNLOADING AND/OR INSTALLING AND USING INFRAGISTICS SOFTWARE:  you are indicating that you have read and understand this Agreement, and agree to be legally bound by it on behalf of the yourself and your company.
+*/
+
+import { Base, String_$type, Type, markType } from "./type";
+import { TypeDescriptionContext } from "./TypeDescriptionContext";
+import { Dictionary$2 } from "./Dictionary$2";
+import { PolarLineSeriesBaseDescriptionMetadata } from "./PolarLineSeriesBaseDescriptionMetadata";
+import { PolarLineSeriesDescription } from "./PolarLineSeriesDescription";
+
+/**
+ * @hidden 
+ */
+export class PolarLineSeriesDescriptionMetadata extends Base {
+	static $t: Type = markType(PolarLineSeriesDescriptionMetadata, 'PolarLineSeriesDescriptionMetadata');
+	private static _metadata: Dictionary$2<string, string> = null;
+	private static ensureMetadata(context: TypeDescriptionContext): void {
+		if (PolarLineSeriesDescriptionMetadata._metadata == null) {
+			PolarLineSeriesDescriptionMetadata._metadata = new Dictionary$2<string, string>(String_$type, String_$type, 0);
+			PolarLineSeriesDescriptionMetadata.fillMetadata(context, PolarLineSeriesDescriptionMetadata._metadata);
+		}
+	}
+	static fillMetadata(context: TypeDescriptionContext, metadata: Dictionary$2<string, string>): void {
+		PolarLineSeriesBaseDescriptionMetadata.fillMetadata(context, metadata);
+		metadata.item("UnknownValuePlotting", "ExportedType:string:UnknownValuePlotting");
+	}
+	static register(context: TypeDescriptionContext): void {
+		PolarLineSeriesDescriptionMetadata.ensureMetadata(context);
+		context.registerDescriptionConstructor("PolarLineSeries", () => new PolarLineSeriesDescription());
+		context.register("PolarLineSeries", PolarLineSeriesDescriptionMetadata._metadata);
+	}
+}
+
+

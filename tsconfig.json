@@ -1,26 +1,44 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "importHelpers": true,
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "module": "esnext",
     "moduleResolution": "node",
-    "importHelpers": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "downlevelIteration": true,
+    "allowUnreachableCode": true,
     "target": "es2015",
+    "allowJs": true,
     "typeRoots": [
       "node_modules/@types"
     ],
     "lib": [
-      "es2018",
-      "dom"
-    ]
-  },
-  "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
+      "es2016",
+      "dom",
+      "scripthost"
+    ],
+    "paths": {
+      "igniteui-core/*": [
+        "src/ig/igniteui-core/*"
+      ],
+      "igniteui-charts/*": [
+        "src/ig/igniteui-charts/*"
+      ],
+      "igniteui-grids/*": [
+        "src/ig/igniteui-grids/*"
+      ],
+      "igniteui-gauges/*": [
+        "src/ig/igniteui-gauges/*"
+      ],
+      "igniteui-inputs/*": [
+        "src/ig/igniteui-inputs/*"
+      ],
+    },
+    "rootDir": ".",
+    "baseUrl": "./",
+    "module": "esnext"
   }
 }
