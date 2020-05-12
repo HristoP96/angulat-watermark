@@ -678,7 +678,8 @@ export class IgxCategoryChartComponent extends IgxXYChartComponent implements Af
 		this._styling(this.container, this);
 
 		// tslint:disable-next-line: quotemark
-		const watermark = this.renderer.createElement('trial-watermark');
+		const watermark = this.renderer.createElement('igc-trial-watermark');
+		watermark.setAttribute("theming", true);
 		this.container.appendChild(watermark);
 	}
 

@@ -437,8 +437,8 @@ export class IgxFinancialChartComponent extends IgxXYChartComponent implements A
 			});
 			this.container.appendChild(cr.location.nativeElement);
 		}
-		const watermark = this.renderer.createElement("trial-watermark")
-
+		const watermark = this.renderer.createElement("igc-trial-watermark")
+		watermark.setAttribute("theming", true);
         let context = this._chart.getContext();
 
         let toolbarContext = context.vm.toolbar;

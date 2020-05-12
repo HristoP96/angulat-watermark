@@ -298,8 +298,9 @@ export class IgxDataChartComponent extends IgxSeriesViewerComponent implements A
 			});
 			//this._container.appendChild(cr.location.nativeElement);
 
-            const wrapper = this._renderer.createElement("trial-watermark")
-            this._container.appendChild(wrapper);
+			const watermark = this._renderer.createElement("igc-trial-watermark");
+			watermark.setAttribute("theming", true);
+            this._container.appendChild(watermark);
 		}
 
         this._axesAdapter.updateQuery(this.contentAxes);
